@@ -14,11 +14,11 @@ int main(){
     std::cout << "What is the height of the octagon in cm? ";
     std::cin >> height;
 
-    double result = calculateArea(length);
-    std::cout << result << "cm^2" << '\n';
+    double areaResult = calculateArea(length);
+    std::cout << areaResult << "cm^2" << '\n';
 
-    double result2 = calculateVolume(length, height);
-    std::cout << result2 << "cm^3" << '\n';
+    double volumeResult = calculateVolume(length, height);
+    std::cout << volumeResult << "cm^3" << '\n';
 
 }
 
