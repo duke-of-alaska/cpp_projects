@@ -7,14 +7,12 @@ on:
       - 'README.md'
       - 'SECURITY.md'
       - '.gitignore'
-      - '.github/**' # Ignores changes to the workflow files themselves
   pull_request:
     branches: [ "main", "features" ]
     paths-ignore:
       - 'README.md'
       - 'SECURITY.md'
       - '.gitignore'
-      - '.github/**' # Ignores changes to the workflow files themselves
 
 jobs:
   build:
