@@ -1,0 +1,28 @@
+name: C++ CI Build
+
+on:
+  push:
+    branches: [ "main", "features" ]
+    paths-ignore:
+      - 'README.md'
+      - 'SECURITY.md'
+      - '.gitignore'
+      - '.github/**' # Ignores changes to the workflow files themselves
+  pull_request:
+    branches: [ "main", "features" ]
+    paths-ignore:
+      - 'README.md'
+      - 'SECURITY.md'
+      - '.gitignore'
+      - '.github/**' # Ignores changes to the workflow files themselves
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout local repository code
+        uses: actions/checkout@v4
+
+      - name: Compile the C++ main program
+        run: g++ -std=c++20 './Name Combinator/name_combinator_3000.cpp' -o namecombinator
